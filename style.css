@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap");
+
+:root {
+  --veryDarkColor: #2e323f;
+  --darkColor: #3b4050;
+  --softColor: #6f737f;
+  --grayColor: rgb(240, 238, 238);
+  --white: #ffffff;
+  --yellow: #a59678;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Oswald", sans-serif;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  line-height: 24px;
+}
+
+a {
+  line-height: 24px;
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.flex {
+  display: flex;
+}
+
+.opacity {
+  opacity: 60%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px 30px;
+}
+
+h1 {
+  line-height: 60px;
+}
+
+/* Header */
+header,
+button {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+header {
+  background-color: var(--veryDarkColor);
+}
+
+header a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+button {
+  background-color: var(--yellow);
+  color: var(--white);
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: none;
+}
+
+/* Hamburguer menu */
+#hamburguer {
+  position: absolute;
+  right: 30px;
+}
+
+.line {
+  width: 25px;
+  margin: 5px 0;
+  height: 3px;
+  background-color: var(--white);
+}
+
+/* Nav */
+
+.nav {
+  flex-direction: column;
+  height: 25px;
+}
+
+.nav__list--primary {
+  font-family: cursive;
+  font-size: 1.7rem;
+}
+
+.nav__list--secondary,
+.nav__list--tertiary {
+  gap: 15px;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--veryDarkColor);
+  width: 100vw;
+  z-index: 1;
+  padding: 25px;
+  margin: 0 -30px;
+}
+
+.nav__list--tertiary {
+  padding: 20px 0 40px;
+}
+
+.nav__list--secondary.active,
+.nav__list--tertiary.active {
+  visibility: visible;
+}
+
+/* Section primary */
+.section--primary {
+  background-color: var(--darkColor);
+}
+
+.section--primary .container {
+  flex-direction: column;
+}
+
+.section--primary h1 {
+  margin: 20px 0;
+  font-size: 3rem;
+  color: var(--white);
+}
+
+.section--primary p {
+  margin: 40px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.section--primary button {
+  margin: 0 0 20px 0;
+  max-width: 200px;
+}
+
+.section--primary .container p {
+  margin: 20px 0;
+}
+
+.section--primary .container div {
+  gap: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Section secondary */
+.section--secondary {
+  background-color: var(--grayColor);
+  text-align: center;
+}
+
+.section--secondary .flex {
+  flex-direction: column;
+}
+
+.section--secondary h3 {
+  color: var(--yellow);
+  font-size: 1.7rem;
+  margin: 20px 0;
+}
+
+.section--secondary p {
+  font-size: 1rem;
+  margin: 20px 0;
+}
+
+/* Section tertiary */
+.section--tertiary h2 {
+  color: var(--yellow);
+}
+
+.section--tertiary p {
+  font-size: 1.1rem;
+  margin: 20px 0;
+}
+
+.section--tertiary img {
+  width: 500px;
+  max-width: 80vw;
+}
+.section--tertiary .flex {
+  flex-direction: column;
+}
+
+/* Aside */
+
+.section--tertiary--darkBox {
+  background-color: var(--darkColor);
+  color: var(--white);
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.section--tertiary--darkBox h3 {
+  font-size: 1.4rem;
+}
+
+.section--tertiary--darkBox p {
+  font-size: 0.9rem;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--darkColor);
+  color: var(--white);
+}
+
+.footer__list {
+  flex-direction: column;
+}
+
+.footer__item a,
+.footer__item p {
+  margin: 10px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.footer__item a {
+  display: block;
+}
+
+.footer__item h4 {
+  margin: 30px 0 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+footer h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+footer h4 {
+  color: var(--yellow);
+}
+
+@media (min-width: 700px) {
+  /* Nav menu */
+  #hamburguer {
+    display: none;
+  }
+
+  .nav {
+    flex-direction: row;
+  }
+
+  .nav__list--secondary,
+  .nav__list--tertiary {
+    flex-direction: row;
+    visibility: visible;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+  }
+
+  .nav__list__button {
+    margin: -10px 0;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .nav > div {
+    width: 200px;
+  }
+
+  .nav__list--primary {
+    justify-content: flex-start;
+  }
+
+  .nav__list--secondary {
+    justify-content: center;
+    margin: auto;
+  }
+
+  .nav__list--tertiary {
+    justify-content: flex-end;
+    margin: 0 0 0 auto;
+  }
+
+  /* Section Primary */
+  .section--primary > h1 {
+    line-height: 50px;
+    background-color: aqua;
+  }
+
+  /* Section secondary */
+  .section--secondary .flex {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  /* Section tertiary */
+  .section--tertiary .container {
+    max-width: 100%;
+  }
+
+  .section--tertiary img {
+    max-width: 100%;
+  }
+
+  .section--tertiary article {
+    min-width: 350px;
+  }
+
+  .section--tertiary aside {
+    min-width: 260px;
+  }
+
+  .section--tertiary .container {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* Section primary */
+  .section--primary .container {
+    flex-direction: row;
+  }
+
+  .section--primary .container h1 {
+    max-width: 380px;
+    font-size: 3.5rem;
+  }
+
+  .section--primary .container div {
+    max-width: 500px;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .section--primary .container div p {
+    margin: 40px 30px 40px auto;
+  }
+
+  .section--primary .container {
+    gap: 30px;
+    justify-content: space-between;
+    padding: 50px 30px 70px;
+  }
+
+  /* Section secondary */
+  .section--secondary .flex {
+    gap: 80px;
+  }
+
+  /* Section tertiary */
+
+  .section--tertiary .container {
+    margin: 40px auto;
+  }
+
+  .section--tertiary article {
+    width: 600px;
+  }
+
+  .section--tertiary aside {
+    width: 340px;
+  }
+
+  /* Footer */
+  .footer__list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .footer .container {
+    padding: 50px 0;
+  }
+
+  .footer__list:nth-child(1) {
+    width: 450px;
+  }
+
+  .footer__item {
+    min-width: 150px;
+  }
+}
